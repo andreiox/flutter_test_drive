@@ -27,7 +27,7 @@ class Users extends StatelessWidget {
       case ConnectionState.done:
         return _displayUsers(snapshot.data!);
       default:
-        return Text('I dont fuckin know');
+        return Text('I dont know');
     }
   }
 
