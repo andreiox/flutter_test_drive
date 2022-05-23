@@ -6,14 +6,14 @@ void main() {
   testWidgets('Form transfer has title, 2 inputs and a button', (tester) async {
     await tester.pumpWidget(MaterialApp(home: new TransferForm()));
 
-    final titleFinder = find.text('Making a transfer');
+    final titleText = find.text('Making a transfer');
     final accountNumberInput = find.byKey(new Key('accountNumberInput'));
     final valueInput = find.byKey(new Key('valueInput'));
-    final buttonTextFinder = find.text('Confirm');
+    final button = find.widgetWithText(ElevatedButton, 'Confirm');
 
-    expect(titleFinder, findsOneWidget);
+    expect(titleText, findsOneWidget);
     expect(accountNumberInput, findsOneWidget);
     expect(valueInput, findsOneWidget);
-    expect(buttonTextFinder, findsOneWidget);
+    expect(button, findsOneWidget);
   });
 }
