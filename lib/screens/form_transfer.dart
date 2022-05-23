@@ -15,11 +15,13 @@ class TransferForm extends StatelessWidget {
       body: Column(
         children: <Widget>[
           Input(
+            key: new Key('accountNumberInput'),
             controller: controllerAccountNumber,
             label: 'Account number',
             hint: '1010',
           ),
           Input(
+            key: new Key('valueInput'),
             controller: controllerValue,
             label: 'Value',
             hint: '150.25',
